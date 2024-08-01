@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditions</title>
+</head>
+<body>
+    <script>
+        // ---------if statement------------
+        let a = 10;
+        if(a>=10){
+            console.log("true")
+        }
+        
+        // ---------- else statement ------------
+        let b = 10;
+        if(b==50){
+            console.log("true")
+        }
+        else{
+            console.log("false")
+        }
+
+        // ---------else-if statement--------
+        let age = prompt("enter your age");
+        if(age==10){
+            console.log(`Your are just crossed the age ${age}`)
+        }
+        else if( age>10 && age<15){
+            console.log(`Your are just near to the age ${age}`)
+        }
+        else if(age>15 && age<30){
+            console.log(`Your age is ${age}`)
+        }
+        else{
+            console.log(`Your age is greater ${age}`)
+        }
+
+        //---------switch statement------------
+        let day = prompt("enter the day");
+        switch(day){
+            case "sunday":
+                console.log(`To day is ${day}`);
+            break;
+            case "monday":
+                 console.log(`To day is ${day}`);
+            break;
+            case "tuesday":
+                 console.log(`To day is ${day}`);
+            break;
+            case "wednesday":
+                 console.log(`To day is ${day}`);
+            break;
+            case "thursday":
+                console.log(`To day is ${day}`);
+            break;
+            case "friday":
+                 console.log(`To day is ${day}`);
+            break;
+            case "saturday":
+                 console.log(`To day is ${day}`);
+            break;
+            default:
+                  console.log(`Something went wrong`);
+        }
+    </script>
+</body>
+</html>

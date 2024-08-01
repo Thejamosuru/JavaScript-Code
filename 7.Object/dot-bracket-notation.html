@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dot and Bracket Notation in JavaScript</title>
+    <style>
+       
+    </style>
+</head>
+<body>
+    <script>
+        let info = {
+            Name:"Ramu",
+            Age:25,
+            FatherName:"RaviChandra",
+            MotherName:"Neelima",
+            Sister:"Priyanka",
+            Brother:"Sunil",
+        }
+
+        /*  -----Dot Notation-----
+
+        Dot Notation:-It is used to access the object property using dot extension of property name  */
+
+        console.log(info.Name);
+        console.log(info.FatherName);
+
+        /*  -----Bracket Notation-----
+        
+        Bracket Notation:-It is used to access the object property using object name inside a set of square bracket[] followed by property name  */
+
+        console.log(info['MotherName']);
+        console.log(info['Sister']);
+
+        /* ----- Difference b/w Dot and Bracket notation ----- */
+
+        //-----Bracket Notation-----
+
+        const parent = "Father";
+        console.log(info[parent+"Name"]);
+
+        //-----Dot Notation-----
+
+        // console.log(info.parent+"Name"+);
+
+        const mother = 'MotherName';
+        console.log(info.mother);
+
+
+    </script>
+</body>
+</html>

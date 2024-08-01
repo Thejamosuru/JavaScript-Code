@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async-promise_JS</title>
+</head>
+<body>
+    <script>
+          let random = Math.random()*100
+        let pramise = new Promise(function(resolve,reject){
+            if(random > 50){
+                setTimeout(()=>{
+                    resolve("fulfilled")
+                },2000)
+            }
+            else{
+                reject("Not fulfilled")
+            }
+        })
+
+        const promis = new Promise((resolve,reject)=>{
+            setTimeout(() => {
+                resolve("Timer Done")
+            }, 0);
+        })
+        
+        //----Async,Await FUnction-----
+        async function handling(){
+            let handle;
+            let pramis;
+            try{
+                pramis = await promis;
+                handle = await promise;
+            }
+            catch(error){
+                console.log(error);
+            }
+            console.log(pramis,handle);
+        }handling();
+
+        //--------static promise methods-----
+
+        //-----promise race-----
+        Promise.race([pramise,promis]).then((dataaa)=>{
+            console.log(dataaa);
+        }).catch((error)=>{
+            console.log(error);
+        });
+
+        //-----promise.all-----
+        Promise.all([pramise,promis]).then((data)=>{
+            console.log(data);
+        });
+
+        //-----Promise.allsettled-----
+        Promise.allSettled([pramise,promis]).then((data)=>{
+            console.log(data);
+        })
+
+         
+        
+    </script>
+</body>
+</html>

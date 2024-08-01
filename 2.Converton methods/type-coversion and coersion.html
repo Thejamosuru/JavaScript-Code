@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //----------Type conversion----------------
+
+        //-----string to number-----
+        let data = "123";
+        console.log(Number(data));
+
+        let count = "123"
+        console.log(+count);
+
+        let sum = "123.456abc";
+        console.log(parseInt(sum));
+
+        let range = "123.456abc";
+        console.log(parseFloat(range));
+
+        //-----number to string-----
+        let age = 25;
+        console.log(String(age));
+
+        let weight = 64;
+        console.log(weight.toString());
+
+        //-----Boolean-----
+        console.log(Boolean(0));
+
+        console.log(Boolean(""));
+
+        console.log(Boolean(null));
+
+        console.log(Boolean(NaN));
+
+        console.log(Boolean(undefined));
+
+        //-------------Type coersion-----------
+        
+        //-----Addition-----
+        console.log("2"+2);
+
+        console.log(2+5+"20");
+
+        console.log(2+3+"hello"+6+4);
+
+        console.log(2+3+"hello"+2+true);
+
+        console.log("Theja"+2+3+"hello"+2+undefined);
+
+        //-----Substraction-----
+        console.log(10-"2");
+
+        console.log("10"-null);//null = 0
+
+        console.log("10"-undefined);
+
+        //-----multiplication-----
+        console.log(10*"2");
+
+        console.log("10"*null); //null = 0
+
+        console.log("10"*undefined);
+
+        //-----division-----
+        console.log(10/"2");
+
+        console.log("10"/null); //null:-0
+
+        console.log("10"/undefined);
+
+
+
+    </script>
+</body>
+</html>

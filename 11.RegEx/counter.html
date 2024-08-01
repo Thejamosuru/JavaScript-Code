@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Counter App</h1>     
+    <h2 id="Addd">Count:0</h2>
+    <button>Increment</button>
+    <button>Decrement</button>
+    <button>Reset</button>
+    <script>
+        let count = 0;
+
+        let add = document.getElementsByTagName("button")[0];
+        let adding = ()=>{
+            count+=5
+            Addd.innerHTML=`Count:${count}`
+        }
+        add.addEventListener("click",adding);
+    
+        let sub = document.getElementsByTagName("button")[1];
+        let substract = ()=>{
+            count-=5
+            Addd.innerHTML = `Count:${count}`
+        }
+        sub.addEventListener("click",substract);
+
+        let reset = document.getElementsByTagName("button")[2];
+        let res = ()=>{
+            count=0
+            Addd.innerHTML =`Count:${count}`
+        }
+        reset.addEventListener("click",res);
+    </script>
+</body>
+</html>

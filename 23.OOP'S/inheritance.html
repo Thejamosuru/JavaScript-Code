@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //-------Inheritance using ES6 class-----
+        class parent{
+            constructor(name,year){
+                this.name = name;
+                this.bithyear = year;
+            }
+
+            calcage(){
+                console.log(`${2024-this.bithyear}`);
+            }
+            gender = "Male"
+        }
+
+        class child extends parent{
+            constructor(name,year,qual){
+                super(name,year)
+                this.qual = qual;
+            }
+        }
+
+        peter = new child('peter',1995,'B Tech')
+        console.log(peter); //----- Inherirance
+        peter.calcage() // -----> Prototypical inheritance
+        console.log(peter.gender); // -----> Prototypical inheritance
+
+        //-----Inheritance using constructor function-----
+
+        function parents(name,year){
+            this.name = name;
+            this.year = year;
+        }
+
+        function childs(name,year,qual){
+            parents.call(this,name,year);
+            this.qual= qual
+        }
+
+        //-----making relation parent to child------
+        childs.prototype=Object.create(parents.prototype)
+        let person = new childs("peter",1995,"B-Tech")
+        console.log(person);
+    </script>
+</body>
+</html>

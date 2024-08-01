@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strings</title>
+</head>
+<body>
+    <script>
+        //STRING:-What ever the data paused inside double/single quatation.
+
+        //String literal way
+        let info = "Achievers institue is best instituE in bangalorE";
+        let information = " Achievers institue ";
+    
+        //String construct way
+        let word = new String("literal/construct");
+        console.log(word);  
+
+        //String methods
+
+        console.log(info.indexOf("e"));
+        console.log(info.lastIndexOf("e"));
+        console.log(info.charAt("5"));
+        console.log(info.charCodeAt(5));
+        console.log(info.substr(0,4));
+        console.log(info.substring(3,4));
+        console.log(info.toLowerCase());
+        console.log(info.toUpperCase());
+        console.log(info.length);
+        console.log(information.trim());
+        console.log(info.includes("s"));
+        console.log(information.replace("e","E"));
+        console.log(information.replaceAll("e","E"));
+        console.log(info.split(" "));
+        console.log(info.startsWith("A"));
+        console.log(info.endsWith("e"));
+        console.log(info.match(/e/gi));
+        console.log(info.search("e"));
+        console.log(info.slice(1,6));
+        console.log(info.padStart("A"));
+        
+       
+    </script>
+</body>
+</html>

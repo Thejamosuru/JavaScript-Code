@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loops-js</title>
+</head>
+<body>
+    <script>
+        //-------------Entry controlled loop-------------
+
+        //-----for loop-----
+        for(i=1;i<=5;i++){
+            console.log(`${i} --- hello world`);
+            console.log(i +"--- hello world");
+        }
+
+        //-----for loop using continue-----
+        for(i=1;i<=5;i++){
+            if(i==2){
+                continue;//usage of continue is skip the given statement and execute remaing lines.
+            }
+            console.log(`${i} --- good morning`);
+        }
+        //-----for loop using break-----
+        for(i=1;i <= 5;i++){
+            if(i==4){
+                break;//usage of break is stop the execution what ever the condition given from that.
+            }
+            console.log(`${i} --- good afternoon`);
+        }
+        //-----for loop using nested-----
+        for(i=1;i<=3;i++){
+            console.log(`${i} --- i'm parent`);
+
+            for(j=1;j<=3;j++){
+            console.log(`${j} --- i'm children`);
+        }    
+        }
+
+        //-----while loop-----
+        let age = 1;
+        
+        while(age<=5){
+            console.log(`${age} -- is my age`);
+            age++;
+        }
+
+        //------------------Exit controlled loop-------------
+
+        //-----do-while loop-----
+        let number =1;
+
+        do{
+            console.log(number);
+            number++;
+        }while(number<=9);
+    </script>
+</body>
+</html>

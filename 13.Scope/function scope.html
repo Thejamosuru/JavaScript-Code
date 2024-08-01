@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funxtion scope-JS</title>
+</head>
+<body>
+    <script>
+        //-----Function Scope-----
+
+        function greet(){
+            var x =5;
+            let y = 10;
+            const z = 15;
+            console.log(x,y,z)// calling inside the function only executing
+        }greet();
+        console.log(x,y,z);//calling outside the function is not executing
+    </script>
+</body>
+</html>

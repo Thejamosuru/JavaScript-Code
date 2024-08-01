@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOISTING_JS</title>
+</head>
+
+<body>
+    <script>
+        //-------------HOISTING-------------
+
+        //-----using var keyword-----
+        // console.log(x);
+        // var x =20;
+
+        //-----using let and const keywords-----
+        // console.log(y);
+        // console.log(z);
+        // let y = 10;
+        // const z = 5;
+
+        //-----using function-----
+        // greet()
+        // function greet(){
+        //     console.log("hello world")
+        // }
+
+        //-----function expression using var keyword-----
+        // greet()
+        //  var greet = function(){
+        //     console.log("Hello world")
+        //  }
+
+        //-----function expression using let keyword-----
+        //  greet()
+        //  let greet = function(){
+        //     console.log("Hello world")
+        //  }
+
+        //-----function expression using const keyword-----
+        greet()
+        const greet = function () {
+            console.log("Hello world")
+        }
+
+        //-----temporary dead zone(TDZ)-----
+        if (true) {
+            console.log(z);
+            console.log(x); //----> A region where we can't able to access the variables
+            console.log(y);
+
+            var z = 20;
+            let x = 30;
+            const y = 40;
+        }
+
+
+    </script>
+</body>
+
+</html>

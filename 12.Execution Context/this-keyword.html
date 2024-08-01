@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Execution context-This keyword-JS</title>
+</head>
+<body>
+    <button>Click Me</button>
+    <script>
+        //-----using This keyword-----
+        const tv = {
+            brand:"samsung",
+            model:"xtulz3000ul",
+            year:2024,
+            price:68000,
+            info:function(){
+                console.log(`The TV brand is ${this.brand} and model ${this.model} and manufacturing year is ${this.year} and the proce is ${this.price}`)
+            }
+        }
+        tv.info();
+
+        //----- using this keyword in function-----
+
+        function name(){
+            console.log(this);
+        }name();
+
+        //----- using this keyword in arrow function-----
+
+        let name = ()=>{  
+            console.log(this);
+        }
+        name();
+
+        //-----using this keyword selecting HTML tag-----
+            let btn = document.querySelector("button");
+            btn.addEventListener("click",function(){
+                console.log(this);
+            })
+            
+            
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deep and shallow copy - JavaScript</title>
+</head>
+<body>
+    <script>
+        let info = ["Ramu","male","10th",["somu","mohan"]];
+        // let information = info
+        // information[2] = "12th";
+
+        // console.log(info);
+        // console.log(information);
+
+        //------Shallow copy-----
+
+        // let details = [...info];
+        // details[2] = "12th"
+        // details[3].push("ravi")
+
+        // console.log(info);
+        // console.log(details);
+
+        //-----Deep copy-----
+
+        let userinfo = JSON.parse(JSON.stringify(info));
+        userinfo[3].push("ravi");
+
+        console.log(info);
+        console.log(userinfo);
+         
+        
+    </script>
+</body>
+</html>

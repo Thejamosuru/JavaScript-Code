@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //------Getters & Setters in object-----
+
+        let info = {
+            name : "peter",
+            birthYear : 1995,
+            qual : "B-Tech",
+            msg : function(){
+                console.log(`my age is ${2024-this.birthYear}`);
+            }
+        }
+        console.log(info);
+        info.msg()
+
+        let details = {
+            name : "paker",
+            birthYear : 1999,
+            qual : "B-Tech",
+            get msg (){  //---> write a function without a function keyword is called enhanced modern literals
+                return `my age is ${2024-this.birthYear}`;
+            },
+
+            set changebirthyear(year,){
+                this.birthYear = year;
+            }
+        }
+
+        console.log(details);
+        //----- calling method in object-----
+        // details.msg()
+        //---- Call method after conveted to property-----
+        details.msg;
+
+        // details.changebirthyear(2000);
+        details.changebirthyear = 2000;
+        console.log(details);
+        
+   
+        //------Getters & Setters in ES6 class-----
+
+        class parent {
+            constructor(name,year){
+                this.name = name;
+                this.dob = year;
+            }
+            get calcage(){
+                return `My age is ${2024-this.dob}`;
+            }
+            set chandgedob(year){
+                this.dob = year
+            }
+        }
+
+        const jessica = new parent('Jessica',1995)
+
+        console.log(jessica);
+        // jessica.calcage();
+        jessica.calcage
+
+        // jessica.chandgedob(1999);
+        jessica.chandgedob = 1999
+        console.log(jessica);
+    </script>
+</body>
+</html>

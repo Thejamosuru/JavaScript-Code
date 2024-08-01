@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array</title>
+</head>
+<body>
+    <div id="name">
+
+    </div>
+    <script>
+        //ARRAY:-Collection of elements in single/different data type.
+
+        //-----Array-----
+        let data = ["ravi","ramu","ramesh","rajesh","raventh"];
+        console.log(data);
+
+        //--------------Array methods--------
+        //push
+        console.log(data.push(["theja","raju"])+"<br>");
+        console.log(data)
+
+        //pop
+        console.log(data.pop())
+        console.log(data);
+
+        //un-shift
+        console.log(data.unshift("theja"))
+        console.log(data);
+
+        //shift
+        console.log(data.shift());
+        console.log(data);
+
+        //length
+        console.log(data.length);
+
+        //At
+        console.log(data.at(1));
+
+        //tostring
+        let b=data.toString();
+        console.log(b);
+        console.log(typeof(b));
+        
+        //join
+        console.log(data.join("&"));
+
+        //concat
+        let a = ["2018","2019","2020"];
+        let c = ["2021","2022","2023"];
+        console.log(a.concat(c));
+
+        //reverse
+        console.log(data.reverse());
+        data.splice
+
+        //slice
+         console.log(data.slice(1,3));
+
+        //delete(deleting single data)
+        console.log(delete data[3]);
+        console.log(data);
+
+        //delete(deleting entire data)
+        console.log(delete data());
+        console.log(data);
+        
+
+
+        let dat = "<ul>"
+        for(i=0;i<data.length;i++){  
+            console.log(data[i]);
+            dat +="<li>"+data[i]+"</li>"
+        }
+        dat+= "</ul>"
+        console.log(dat[i]);
+        document.getElementById("name").innerHTML=dat;
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern operators-JS</title>
+</head>
+<body>
+    <script>
+        //-----Spread operators-----
+        let range = [1,2,3,4,5]
+
+        function calculate(a,b,c,d,e){//---->here my value is array,in array destructure way     1st variable takes first value and 2nd variable takes second value,in my array 5values is there that's why i'm pausing 5 parameters name.
+            console.log(a,b,c,d,e);
+        }
+        calculate(...range);//---->here we passing parameter value,always value pause in right side,if we use "..." in right side it acts as spread operator.
+
+        //-----Rest operator-----
+
+        function amount(a,b,...rest){
+            console.log(a);
+            console.log(b);
+            console.log(rest);
+        }amount(...range);
+
+    </script>
+</body>
+</html>

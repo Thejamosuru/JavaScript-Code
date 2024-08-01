@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic-html-js</title>
+    <style>
+        header {
+            display: flex;
+            width: 100%;
+            border: 2px solid gray;
+            box-sizing: border-box;
+        }
+
+        img {
+            width: 250px;
+        }
+    </style>
+</head>
+
+<body>
+    <table cellpadding="2px" border="2px" celspacing="0px">
+        <tr id="tr">
+            <th>ID</th>
+            <th>NAME</th>
+            <th>CITY</th>
+            <th>SALARY</th>
+        </tr>
+        <tbody id="table" >
+        </tbody>
+    </table>
+    <script>
+
+        //DOM:-It is document object model .it is used to create dynamic HTML elements and selecting HTML tag.
+
+        
+        //---------Creating HTML elemnts dynamic--------
+        //-----1st Method-----
+        let ait = [
+            {
+                imgurl: "https://www.achieversit.com/assets/images/logo-white.png",
+                location: "BTM_Layout",
+                course: "python",
+                fees: 10
+            },
+            {
+                imgurl: "https://www.achieversit.com/assets/images/logo-white.png",
+                location: "marthalli",
+                course: "java",
+                fees: 10
+            },
+            {
+                imgurl: "https://www.achieversit.com/assets/images/logo-white.png",
+                location: "rajendranagar",
+                course: "frontend",
+                fees: 10
+            },
+            {
+                imgurl: "https://www.achieversit.com/assets/images/logo-white.png",
+                location: "amerpeta",
+                course: "backend",
+                fees: 10
+            }
+        ]
+        console.log(ait);
+        let institute = "<section>"
+            for(let i=0;i<ait.length;i++){
+                institute+="<figure>"
+                institute+="<img src="+ait[i].imgurl+">"
+                institute+="<figcaption>"+ait[i].course+"</figcaption>"
+                institute+="<figcaption>"+ait[i].fees+"</figcaption>"
+                institute+="<figcaption>"+ait[i].location+"</figcaption>"
+                institute+="</figure>"      
+            }
+            institute+="</section>";
+         document.write(institute);
+        //  console.log(institute);   
+
+        //------2nd method-----
+        let head = document.createElement("header");
+        let sec = document.createElement("section");
+        let img = document.createElement("img");
+        img.setAttribute("src", "https://www.achieversit.com/assets/images/logo-white.png");
+        img.setAttribute("alt", "Achievere IT");
+        let nav = document.createElement("nav");
+        let ul = document.createElement("ul");
+        let li = document.createElement("li")
+        let anchor = document.createElement("a");
+        anchor.setAttribute("href", "");
+        let anc = document.createTextNode("All courses");
+        let lis = document.createElement("li")
+        let anchr = document.createElement("a");
+        anchr.setAttribute("href", "");
+        let anch = document.createTextNode("placements");
+        let list = document.createElement("li")
+        let anchro = document.createElement("a");
+        anchro.setAttribute("href", "");
+        let ancho = document.createTextNode("reviews");
+        let lsit = document.createElement("li")
+        let acnhro = document.createElement("a");
+        acnhro.setAttribute("href", "");
+        let acnho = document.createTextNode("Blog");
+
+
+
+        head.appendChild(sec);
+        sec.appendChild(img);
+        head.appendChild(nav);
+        nav.appendChild(ul);
+        ul.appendChild(li);
+        li.appendChild(anchor);
+        anchor.appendChild(anc)
+        ul.appendChild(lis);
+        lis.appendChild(anchr);
+        anchr.appendChild(anch);
+        ul.appendChild(list);
+        list.appendChild(anchro);
+        anchro.appendChild(ancho);
+        ul.appendChild(lsit);
+        lsit.appendChild(acnhro);
+        acnhro.appendChild(acnho);
+
+
+        // document.write(head) ;
+        // console.log(head);
+        // document.head.innerHTML = "";
+        // head.innerHTML;
+        document.write(head.innerHTML);
+
+        //-----3rd Method-----
+        let data = [
+            {id:101,name:"Theja",city:"Chandragiri",salary:100000},
+            {id:102,name:"Chandhi Priya",city:"Chandragiri",salary:100000},
+            {id:103,name:"Navya",city:"I Rangaiahgari palli",salary:100000},
+            {id:104,name:"Muni kumar",city:"Chandragiri",salary:100000},
+            {id:105,name:"Adhi",city:"Chandragiri",salary:100000},
+        ]
+            let tr = ""
+        for(let i = 0;i<data.length;i++){
+             tr +=`<table>
+                <tr>
+                <td>${data[i].id}</td>
+                <td>${data[i].name}</td>
+                <td>${data[i].city}</td>
+                <td>${data[i].salary}</td>
+                </tr>
+                </table>`
+        }
+        // console.log(tr);
+
+        // document.querySelector("table").innerHTML = tr;
+        document.getElementById("table").innerHTML=tr;
+        // document.write(tr.innerHTML);
+
+    </script>
+</body>
+
+</html>

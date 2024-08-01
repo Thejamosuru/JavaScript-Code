@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lexical this-JS</title>
+</head>
+<body>
+    <script>
+        //-----lexical keyword-----
+        const tv = {
+            brand:"samsung",
+            model:"xtulz3000ul",
+            year:2024,
+            price:68000,
+            info:function(){
+                console.log(this);
+                let greet = ()=>{
+                console.log(`The TV brand is ${this.brand} and model ${this.model} and manufacturing year is ${this.year} and the proce is ${this.price}`)
+                }
+                greet()
+            }
+        }
+        tv.info()
+    </script>
+</body>
+</html>

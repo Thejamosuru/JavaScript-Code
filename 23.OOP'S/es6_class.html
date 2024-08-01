@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //-----Class expression-----
+        const info = class {
+            constructor(name,year){
+                this.name = name;
+                this.birthYear = year;
+            }
+        }
+
+        const person1 = new info('paker',1998);
+        const person2 = new info('phlorina',1997);
+        console.log(person1);
+        console.log(person2);
+
+        //-----Class decleration------
+        class parent{
+            constructor(name,year){
+                this.name = name;
+                this.birthYear = year;
+            }
+            calcage(){
+                console.log(2023-this.birthYear);
+            }
+            qual = 'B-tech'
+        }
+
+        const Peter = new parent('Peter',1995);
+        const jessica = new parent('jessica',1999);
+
+        console.log(Peter);
+        console.log(jessica);
+
+        Peter.calcage();
+        jessica.calcage();
+
+        console.log(Peter.qual);
+        console.log(jessica.qual);
+
+
+    </script>
+</body>
+</html>

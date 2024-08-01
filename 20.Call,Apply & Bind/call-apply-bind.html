@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call,Apply And Bind methods in Javscript</title>
+</head>
+<body>
+    <script>
+        let brand = {
+            product : "Sony",
+            Inches:55,
+            Resolution:"4K"          
+        }
+
+        let Make = {
+            product : "LG",
+            Inches:55,
+            Resolution:"4K"         
+        }
+
+        let details = function(price,year){
+            console.log(`${this.product} ${this.Inches} with ${this.Resolution} the cost of product is ${price} and manufacturing year is ${year} `)
+        }
+        // details(150000,2024);
+
+        //-----Call Method-----
+
+        console.log("----------Call----------");
+        details.call(brand,150000,2024);
+        details.call(Make,135000,2024);
+        
+        //-----Apply Method-----
+
+        console.log("----------Apply----------");
+        let price1 = [150000,2024];
+        details.apply(brand,price1);
+
+        let price2 = [135000,2024];
+        details.apply(Make,price1);
+
+        //-----Bind method-----
+
+        console.log("----------Bind----------");
+        let about = details.bind(brand);
+        about(150000,2024);
+        about(155000,2024);
+
+        let about1 = details.bind(Make);
+        about1(150000,2024);
+        about1(155000,2024);
+    </script>
+</body>
+</html>

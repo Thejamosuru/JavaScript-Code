@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //-----Primitive Data Type-----
+
+        let x = 20;
+        let y = x;
+            x = 30;
+        console.log(x,y);
+
+        //-----Un-primitive/Reference-----
+
+        let info = {
+            name:"raju",
+            age:25,
+            gender:"male",
+            friend:["rupesh","ramesh"],
+            place:"Bangalore"
+        }
+        
+        let persone = info;
+        persone.name="rani"
+        persone.age=20;
+        persone.gender="female"
+        persone.place = "chennai"
+
+        // console.log(info);
+        // console.log(persone);
+
+    //-------Shallow Copy-------
+        let person = Object.assign({},info);
+        person.name = "ravi";
+        person.age=18;
+        person.gender="Male";
+        person.place="Hyderbad";
+        person.friend.push("rajesh");
+        
+        // console.log(info);
+        // console.log(person);
+
+    //--------Deep Copy---------
+
+    let information = JSON.parse(JSON.stringify(info));
+    information.name="rakesh";
+    information.age=22;
+    information.gender="Male";
+    information.place="mumbai";
+    information.friend.push("satheesh");
+
+    console.log(info);
+    console.log(information);
+       
+    </script>
+</body>
+</html>

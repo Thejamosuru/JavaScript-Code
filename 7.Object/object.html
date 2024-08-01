@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object-js</title>
+</head>
+<body>
+    <script>
+        // -----------literal way----------
+        
+        let tv = {
+            Brand:"LG",
+            model:"ut5000xul",
+            inches:65,
+            color:["black","white"],
+            piece:1,
+            price:75000
+        }
+        console.log(tv);
+        console.log(tv.color[1]);
+        
+        //-------for in loop-------
+        for(let tele in tv){
+            console.log(tele);
+            console.log(tv[tele]);
+        }
+
+        //-----fetching the data keys in one line------
+        console.log(Object.keys(tv));
+
+        //-----fetching the data value in one line------
+        console.log(Object.values(tv));
+
+        //-----assign the additional objects------
+        Object.assign(tv,{reviews:20000},{quatity:1000});
+        console.log(tv);
+
+        //------delete unwanted data------
+        delete tv.piece;
+        console.log(tv);
+
+        //----- Freeze-----
+        Object.freeze(tv);
+
+        tv.poplable = "Mandatory"
+        delete tv.color;
+        tv.Brand = "Sony"    
+        console.log(tv);        
+
+        //-----Entries-----
+        console.log(Object.entries(tv));
+
+        //-----Seal-----
+        Object.seal(tv);
+        tv.Brand = 'Samsung'
+        delete tv.Brand
+        console.log(tv);
+
+
+        //------nested object-------
+        let travels = {
+            source:"Bangaluru",
+            destination:"tirupati",
+            kilometers:300,
+            duration:6,
+            ticket:{"price":1300,// nested started
+            halttime:15          // nested ended
+            }
+        }
+        console.log(travels);
+
+        //------------constructor way-------------
+        let transport = new Object();
+        transport.name = "APSRTC";
+        transport.capacity = "50-members";
+
+        console.log(transport);
+
+        //-----Constructor function-----
+        function details (year){
+            this.name = "Ramu",
+            this.age = 24,
+            this.graduationYear = year
+        };
+
+        let info = new details(2023);
+        console.log(info);
+
+    </script>
+</body>
+</html>

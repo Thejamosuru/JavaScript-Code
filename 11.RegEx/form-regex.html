@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form-validation-regex-JS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        form{
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            width: 250px;
+            text-align: center;
+            padding: 20px 0 10px 0;
+            transform: translateX(500px);
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <input type="text" placeholder="Firstname" id="fname"><br>
+        <span id="ferr"></span><br>
+        <input type="text" placeholder="Lastname" id="lname"><br>
+        <span id="lerr"></span><br>
+        <input type="email" placeholder="Email" id="mail"><br>
+        <span id="mailerr"></span><br>
+        <input type="password" placeholder="password" id="psw"><br>
+        <span id="pswerr"></span><br>
+        <input type="tel" placeholder="Phone number" id="phn"><br>
+        <span id="pherr"></span><br>
+        <input type="text" placeholder="PAN Number" id="pan"><br>
+        <span id="panerr"></span><br>
+        <input type="submit" value="submit" id="sub">
+    </form>
+    <script>
+        let namef = document.getElementById("fname");
+        let span1 = document.getElementById("ferr");
+        let namel = document.getElementById("lname");
+        let span2 = document.getElementById("lerr");
+        let mail = document.getElementById("mail");
+        let span3 = document.getElementById("mailerr");
+        let psw = document.getElementById("psw");
+        let span4 = document.getElementById("pswerr");
+        let phone = document.getElementById("phn");
+        let span5 = document.getElementById("pherr");
+        let pan = document.getElementById("pan");
+        let span6 = document.getElementById("panerr");
+        let submit = document.getElementById("sub");
+
+        function Firstname(){
+            let name = namef.value;
+            if(name.length==0){
+                span1.innerHTML="enter your first name";
+                span1.style.color="orange";
+                namef.style.border="2px solid orange";
+                submit.disabled = true;
+                return false;   
+            }
+            if(name.match(/^[A-Z]{1}[a-z]{1,11}$/)){
+                span1.innerHTML = "done";
+                span1.style.color="green";
+                namef.style.border="2px solid green";
+                submit.disabled = false;
+                return true;
+            }
+                span1.innerHTML="FirstName Should contain 5-12 characters";
+                span1.style.border="red";
+                namef.style.border="2px solid red";
+                submit.disabled = true;
+                return false;          
+    }
+        namef.addEventListener("Keyup",Firstname);
+        namef.addEventListener("blur",Firstname);
+
+        function lmane(){
+            let nameLast= namel.value;
+            if(nameLast.length == 0){
+                span2.innerHTML="Enter your last name";
+                span2.style.color = "orange";
+                namel.style.border = "2px solid orange";
+                submit.disabled = true;
+                return false;  
+            }
+            if(nameLast.match(/^[A-Z]{1}[a-z]{1,6}$/)){
+                span2.innerHTML="done";
+                span2.style.color = "green";
+                namel.style.border = "2px solid green";
+                submit.disabled = false;
+                return true;
+            }
+                span2.innerHTML="lastName must be and contain 5-12 characters";
+                span2.style.color = "red";
+                namel.style.border = "2px solid red";
+                submit.disabled = true;
+                return false;  
+        }
+        namel.addEventListener("keyup",lmane);
+        namel.addEventListener("blur",lmane);
+
+        function mailid(){
+            let id = mail.value;
+            if(id.length == 0){
+                span3.innerHTML = "Enter your mail";
+                span3.style.color = "orange";
+                mail.style.border = "2px solid orange";
+                submit.disabled = true;
+                return false; 
+            }
+            if(id.match(/^[a-z]{1,10}[0-9]{1,4}[@]{1}[a-z]{1,7}[.]{1}[a-z]{1,3}$/)){
+                span3.innerHTML = "done";
+                span3.style.color = "green";
+                mail.style.border = "2px solid green";
+                submit.disabled = false;
+                return true; 
+            }
+                span3.innerHTML = "Please enter  .......@gmail.com";
+                span3.style.color = "red";
+                mail.style.border = "2px solid red";
+                submit.disabled = true;
+                return false; 
+        }
+        mail.addEventListener("keyup",mailid);
+        mail.addEventListener("blur",mailid);
+
+        function paswd(){
+            let paswrd = psw.value;
+            if(paswrd.length == 0){
+                span4.innerHTML = "Please enter your password";
+                span4.style.color = "orange";
+                psw.style.border = "2px solid orange";
+                submit.disabled = true;
+                return false; 
+            }
+            if(paswrd.match(/^[A-Za-z0-9@_]{8,20}$/)){
+                span4.innerHTML = "done";
+                span4.style.color = "green";
+                psw.style.border = "2px solid green";
+                submit.disabled = false;
+                return true; 
+            }
+                span4.innerHTML = "create your password as strong";
+                span4.style.color = "red";
+                psw.style.border = "2px solid red";
+                submit.disabled = true;
+                return false; 
+        }
+        psw.addEventListener("keyup",paswd);
+        psw.addEventListener("blur",paswd);
+
+        function phnumber(){
+            let ph = phone.value;
+            if(ph.length == 0){
+                span5.innerHTML = "enter your phone number";
+                span5.style.color = "orange";
+                phone.style.border = "2px solid orange";
+                submit.disabled = true;
+                return false; 
+            }
+            if(ph.match(/^[0-9]{10}$/)){
+                span5.innerHTML = "done";
+                span5.style.color = "green";
+                phone.style.border = "2px solid green";
+                submit.disabled = false;
+                return true; 
+            }
+                span5.innerHTML = "Enter 10 digits number";
+                span5.style.color = "red";
+                phone.style.border = "2px solid red";
+                submit.disabled = true;
+                return false; 
+        }
+        phone.addEventListener("keyup",phnumber);
+        phone.addEventListener("blur",phnumber);
+
+        function pannumber(){
+            let paan = pan.value;
+            if(paan.length == 0){
+                span6.innerHTML = "enter your PAN number";
+                span6.style.color = "orange";
+                pAN.style.border = "2px solid orange";
+                submit.disabled = true;
+                return false; 
+            }
+            if(paan.match(/^[A-Z]{5}[0-9]{4}[A-Z]{1}$/)){
+                span6.innerHTML = "done";
+                span6.style.color = "green";
+                pan.style.border = "2px solid green";
+                submit.disabled = false;
+                return true; 
+            }
+                span6.innerHTML = "Must be a valid PAN ID (e.g., ABCDE1234A)";
+                span6.style.color = "red";
+                pan.style.border = "2px solid red";
+                submit.disabled = true;
+                return false; 
+        }
+        pan.addEventListener("keyup",pannumber);
+        pan.addEventListener("blur",pannumber);
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promises-JS</title>
+</head>
+
+<body>
+    <button id="btn">Click me</button>
+    <script>
+
+        //-----Promise constructor-----
+        let random = Math.random() * 100
+        let promise = new Promise(function (resolve, reject) {
+            if (random > 50) {
+                setTimeout(() => {
+                    resolve("fulfilled")
+                }, 2000)
+            }
+            else {
+                reject("Not fulfilled")
+            }
+        })
+
+        //-----Promise handle-----
+        promise.then(function(data){
+            console.log(data);
+        }).catch(function(error){
+            console.log(error);
+        }).finally(function(){
+            console.log("Done");
+        });
+
+        //------How to handle geogo-location-----
+        let btn = document.getElementById("btn");
+        function handler (){
+            navigator.geolocation.getCurrentPosition((posData)=>{
+                console.log(posData);
+            },(err)=>{
+                console.log(err);
+            })
+        }
+        btn .addEventListener("click",handler)
+
+        //-----How to call API's-----
+        const fetching = fetch("https://jsonplaceholder.typicode.com/users").then((res) => {
+            return res.json()
+        }).then((data) => {
+            console.log(data)
+        })
+
+    </script>
+</body>
+
+</html>

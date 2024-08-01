@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Block scope-JS</title>
+</head>
+<body>
+    <script>
+        if(true){
+            var x = 5;
+            let y = 10;
+            const z = 15;
+            console.log(x,y,z)//calling inside the block is executing
+        }
+        console.log(x);//calling out side block is executing
+        console.log(y);//calling outside the block not executing
+        console.log(z);//calling outside the block not executing
+    </script>
+</body>
+</html>

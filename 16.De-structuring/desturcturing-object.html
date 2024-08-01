@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructring-Object-JS</title>
+</head>
+<body>
+    <script>
+        let detalis ={
+            name:"ramya",
+            age:20,
+            gender:"female",
+            city:"bangalore",
+            friends:["raventh","rajesh","ravi"],
+            family:{
+                father:"ramesh",
+                mother:"hemalatha",
+                brother:"rakesh"
+            }
+        }
+
+        //-----old way-----
+        console.log(detalis.name);
+        console.log(detalis.gender)
+        console.log(detalis.friends[1]);
+        console.log(detalis.family.mother);
+
+        //-----New way-----
+        const {name,city} = detalis;
+        console.log(name,city);//checking main keys
+
+        const{friends:[a,,c]} = detalis;
+        console.log(a,c);//checking array inside objects 
+
+        const{family:{father,brother}} = detalis;
+        console.log(father,brother);//checking nested objects data
+
+         //-----destructuring another way-----
+         let {uname,bfriends:[,b,,d],personal_details:{mom,sis}} = {
+            uname:"ranjith",
+            area:"bangalore",
+            bfriends:["ashok","madhu","karthik","karun"],
+            personal_details:{
+                dad:"manohar",
+                mom:"mounika",
+                bro:"pradeep",
+                sis:"sarala"
+            }
+        }
+        console.log(uname,b,d,mom,sis);
+        
+        //-----Rename to keys-----
+        const{name:person,city:place,} = detalis;
+        console.log(person,place)//changing keys names
+
+        const{family:{father:parent,brother:sibling}} = detalis;
+        console.log(parent,sibling);
+
+       
+
+        //-----Default values-----
+        const{family:{sister="rashmika"}} = detalis;
+        console.log(sister);
+    </script>
+</body>
+</html>

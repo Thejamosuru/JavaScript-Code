@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class student{
+            #marks
+            constructor(name,marks){
+                this.name = name;
+                this.#marks = marks;
+            }
+            calmarks(){
+                console.log(`${this.name} total marks is ${this.#marks}`);
+            }
+        }
+        let peter = new student('peter',90);
+        console.log(peter);
+        peter.calmarks()
+    </script>
+</body>
+</html>

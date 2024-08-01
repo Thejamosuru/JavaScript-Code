@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sets and Maps-JS</title>
+</head>
+<body>
+    <script>
+        //-----sets-----
+        let original = new Set([1,2,3,4,2,4,5,6,5,7,8,9,6,9]);
+        console.log(original);
+
+        console.log(original.size);//checking length
+        console.log(original.has(3));//checking values is there are not
+        console.log(original.add(12));//adding value
+        original.delete(8);
+        console.log(original);//deleting value
+        original.clear();
+        console.log(original);//clear array
+
+        //-----Maps-----
+        let data = new Map();
+
+        data.set("name","muni");
+        data.set(10,"age");
+        data.set(true,"male");
+        data.set(null,"king");
+
+        console.log(data);
+        console.log(data.get(10));
+        data.delete(null);
+        console.log(data);
+        data.clear();
+        console.log(data);
+        
+
+    </script>
+</body>
+</html>

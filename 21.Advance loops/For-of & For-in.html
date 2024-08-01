@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advance-Loops-JS</title>
+</head>
+<body>
+    <script>
+        //-----For-of-loop-----
+
+        let animals = ["lion","tiger","cheta","bear","Elephant"];
+        for(let [index,animal] of animals.entries()){
+            console.log(index,animal);
+        }
+
+        //-----For-in-loop-----
+        
+        let data = {
+            name:"ramesh",
+            age:24,
+            gender:"Male",
+            info:{
+                mother:"Rani",
+                Father:"Raventh",
+                Sister:"Ramya",
+                brother:"Raju"
+            },
+            place:"Bangalore"
+            
+        }
+
+        for(let details in data){
+            console.log(data[details]);
+        }
+    </script>
+</body>
+</html>

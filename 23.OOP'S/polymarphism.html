@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class parent{
+            constructor(name,year){
+                this.name = name;
+                this.birthYear = year;
+            }
+            calcage(){
+                console.log(`my age is ${2024-this.birthYear}`);
+            }
+        }
+
+        class child extends parent{
+            constructor(name,year){
+                super(name,year)
+            }
+            calcage(){
+                console.log(`${this.birthYear}`);
+            }
+        }
+
+        peter = new child('peter',1995,)
+        console.log(peter);
+        peter.calcage()
+    </script>
+</body>
+</html>

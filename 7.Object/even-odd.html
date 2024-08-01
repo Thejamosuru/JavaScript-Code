@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Even/odd-Object-JS</title>
+</head>
+<body>
+    <script>
+        let language = {
+            html:"1-month",
+            css:"2-months",
+            bootstrap:"15-days",
+            git:"1-day",
+            github:"20-days",
+            javascript:"30-days",
+            angular:"30-days",
+            react_js:"30-days"
+        };
+        console.log(language);
+        let lang = Object.keys(language);
+        console.log(lang);
+        for(let i=0;i<lang.length;i++){
+            if(i % 2==0){
+                console.log(language[lang[i]]);
+            }
+        }
+
+        //-----Adding using for loop-----
+        let date =prompt("enter the number");
+        for(let i=1;i<=100;i++){
+            document.write(date*i+"<br>");
+        }  
+
+        //-----------
+        let number = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
+        for(i=1;1<=20;i++){
+            if(i % 3!==0){
+                console.log(number*i);
+            }
+        } 
+         
+
+    </script>
+</body>
+</html>

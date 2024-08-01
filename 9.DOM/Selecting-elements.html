@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>HTML</h1>
+    <h2 class="second">css</h2>
+    <h2 class="sec">Bootstrap</h2>
+    <h2>GIT</h2>
+    <h2>GITHUB</h2>
+    <h3 id="third">JAVASCRIPT</h3>
+    <ul>
+        <li class="list">Theja</li>
+        <li class="list">Chandu</li>
+        <li class="list">Muni</li>
+    </ul>
+    <script>
+        //-------Selcting HTML elemnts by using DOM slectors-------
+        //-----GetelementbyTag-----
+        document.getElementsByTagName("h1")[0].style.color="orange";
+        //-----GetElementbyid-----
+        document.getElementById("third").style.border = "2px solid red";
+        //-----getelementsbyclass-----
+        document.getElementsByClassName("second")[0].style.color = "orange";
+        document.getElementsByClassName("sec")[0].style.color = "red";
+        //-----queryselector-----
+        document.querySelector("h2").style.border = "2px solid green";
+        //-----queryselectorall-----
+        // document.querySelectorAll("h2").style.border = "2px solid gray";
+        // document.getElementsByClassName("list").style.color ="red";
+        document.querySelectorAll("ul li")[2].style.border = "3px solid green"
+
+
+
+
+
+
+        // Target only `li` elements within a specific `ul`
+const specificListItems = document.querySelectorAll('ul.myList li');
+specificListItems.forEach(item => {
+  item.classList.add('bordered');
+});
+
+
+    </script>
+</body>
+</html>

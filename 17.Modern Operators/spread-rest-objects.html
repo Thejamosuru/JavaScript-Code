@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Operators-JS</title>
+</head>
+<body>
+    <script>
+        //-----Spread Operator-----
+        let detalis ={
+            name:"ramya",
+            age:20,
+            gender:"female",
+            city:"bangalore",
+            friends:["raventh","rajesh","ravi"],
+            family:{
+                father:"ramesh",
+                mother:"hemalatha",
+                brother:"rakesh"
+            }
+        }
+        //-----oneway-----
+        let info = {
+            person:"rajesh",
+            height:10,
+            ...detalis
+        } 
+        console.log(info);
+        //-----Anotherway-----
+        let data = {...detalis,family:{sister:"sahara"}};
+        console.log(data);
+
+        //-----Rest Operators-----
+        let {uname,area,...rest} = {
+            uname:"ranjith",
+            area:"bangalore",
+            bfriends:["ashok","madhu","karthik","karun"],
+            personal_details:{
+                dad:"manohar",
+                mom:"mounika",
+                bro:"pradeep",
+                sis:"sarala"
+            }
+        }
+        console.log(uname,area,rest);
+
+    </script>
+</body>
+</html>

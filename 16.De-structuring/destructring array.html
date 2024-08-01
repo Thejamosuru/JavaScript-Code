@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>De-structuring Array-JS</title>
+</head>
+<body>
+    <script>
+        //-----De-structuring Array-----
+        let data =["ramu","ramesh","ravi","raju","raventh"];
+
+        //-----old way-----
+        console.log(data[0]);
+        console.log(data[1]);
+        console.log(data[2]);
+
+        //-----New way-----
+        let [x,y,z,m,n,] =["ramu","ramesh","ravi","raju","raventh"];
+        console.log(x,y,z);
+
+        console.log(x,z,n);
+
+        //-----Ignoring some values-----
+        let [s, ,u, ,w] = [1,2,3,4,5]
+        console.log(s,u,w)
+
+        //-----Nested Arrays-----
+        let [a,[b],c,[d,[e,f],g]] =["ramu",["ramesh"],"ravi",["raju",["raventh","ranjith"],"deepu"]];
+        
+        console.log(b,d,g);
+
+        //-----Default values-----
+        
+        let [h,i,j] =[10,20];// not asign value it prints un-defined.
+        console.log(h,i,j)
+       
+        let [k,l,o=30] =[10,20];
+        console.log(k,l,o);//not assign value and assign value as delfault.the default value print.
+
+        let [p,q,r=30] =[10,20,40];
+        console.log(p,q,r); //assing default value as well as value also and it prints only value.
+    </script>
+</body>
+</html>

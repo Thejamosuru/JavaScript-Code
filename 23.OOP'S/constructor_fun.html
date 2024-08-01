@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //------Constructor Function-----
+        function personal (name,age){
+            this.firstName = name;
+            this.birthYear = age;
+        }
+
+        /* Instantiation:- calling a function witha a new keyword that generates an object 
+                                            (or)
+                        The process of creating an object from a class */
+ 
+       const person1 = new personal('peter',1999)
+       const person2 = new personal('paker',2000)
+
+       /* Instance:- Assigning generated object to new variable
+                                (or)
+                    Whatever the objects created from an class */
+
+       console.log(person1);
+       console.log(person2);
+
+       //-----Adding method in constructor prototype-----
+
+        personal.prototype.calcage = function(){
+            console.log(2023-this.birthYear);
+        }
+
+        //-----Adding property in constructor prototype-----
+
+        personal.prototype.Qual = 'B-Tech';
+
+        console.log(person1);
+        console.log(person2);
+
+        person1.calcage()
+        person2.calcage()
+
+        console.log(person1.Qual);
+        console.log(person2.Qual);
+
+        //------Checking constructor proto and instance proto------
+
+        console.log(personal.__prototype__ == person1.__prototype__);
+        console.log(personal.__prototype__ == person2.__prototype__);
+
+       
+
+    </script>
+</body>
+</html>

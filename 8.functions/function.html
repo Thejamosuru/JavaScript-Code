@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function-js</title>
+</head>
+<body>
+    <script>
+        // FUNCTION:-To perform specific task
+        //-----W/o parameters-----
+        function addition(){
+            let a = 5;
+            let b = 10;
+            let c = a+b;
+            console.log(c);
+        }
+        addition();
+
+        //-----With parameters-----
+        function multiplication(a,b){
+            let mul = a*b;
+            console.log(mul);
+        }
+        multiplication(10,10);
+
+        //-----default parameters-----
+        function interest(amount,percentage = 10){
+            let rate = amount+(amount*percentage/100);
+            console.log(rate);
+        }
+        interest(1000);
+
+        //-----return statement-----
+        function substraction(a,b){
+            let sub = a-b;
+            console.log(sub);
+            return
+            let div = a/b;
+            console.log(div);
+        }
+        substraction(10,5);
+
+        //-----Annonamus/variable function-----
+        let count = function(a,b){
+            let mull =a*b;
+            console.log(mull);
+        }
+        count(2,2);
+
+        //-----Nested function-----
+        function target(prdn_qty,perhour){
+            let reach_target = (prdn_qty*perhour);
+            console.log(reach_target);
+            function rejection(reject,prdn_qty){
+                let ppm = (reject/prdn_qty*10^6);
+                console.log(ppm);
+            }rejection(6,1000);
+        }target(1000,1);
+
+        //-----Arrow function-----
+        let amount = (actual_amount,percentage=10) => {
+            let interest = actual_amount + (actual_amount*percentage/100);
+            console.log(interest);
+        }
+        amount(10000);
+
+        //-----self invoking function-----
+        (function distnace(kilometers,kmh){
+            let speed = kilometers*kmh;
+            console.log(speed);
+        })(1000,1)
+
+        //-----Helping/utility function-----
+        function students(count){
+                return count*4
+        }
+
+        function strength(attend,absent){
+            let present = students(attend);
+            let not_present = students(absent);
+            let total = present+not_present;
+            console.log(total);
+        }
+        strength(5,5);
+
+        //-----Higher order function-----
+        
+        let add = function(){ // -----> This function is a callback function.
+            let collect = 5; // This function pausing as a argument into another function.
+            return collect;
+        }                       
+
+        let high = function(a,add){// -----> This function is a higher order function.
+            let sum = a * add; // This function receives another function as a argument.
+            console.log(sum);
+        }
+        high(2,add());
+    </script>
+</body>
+</html>

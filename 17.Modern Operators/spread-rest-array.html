@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern operators-JS</title>
+</head>
+<body>
+    <script>
+        //-----Spread Operator-----
+        let name = ["ravi","ramu","ramesh","rajesh","raventh"];
+        let newStudents = ["ranjith","kranthi","kiran",...name];
+
+        console.log(newStudents);
+
+        //-----Rest Operator-----
+        let [name1,name2,...others] = ["ravi","ramu","ramesh","rajesh","raventh","ranjith","kranthi","kiran"];
+
+        console.log(name1,name2,others);
+    </script>
+</body>
+</html>
